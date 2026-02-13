@@ -1,0 +1,7 @@
+{
+  "name": "APNA_NAAM ABC 123 LEARNING",
+  "description": "An interactive, educational kids learning game with drag-and-drop, speech synthesis, and custom category management.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

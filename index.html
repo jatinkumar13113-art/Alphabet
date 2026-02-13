@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>APNA_NAAM ABC 123 LEARNING</title>
+    <meta name="description" content="Professional Kids Learning Game - Learn Alphabets, Numbers, Animals, and Colors with Fun!">
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="APNA_NAAM ABC 123 LEARNING">
+    <meta property="og:description" content="Interactive Drag & Drop Learning Game for Kids">
+    <meta property="og:image" content="https://picsum.photos/1200/630?text=ABC+123+Learning">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              kids: ['Fredoka', 'Quicksand', 'sans-serif'],
+            },
+            colors: {
+              primary: '#6C5CE7',
+              secondary: '#00D2D3',
+              accent1: '#FF6B6B',
+              accent2: '#FECA57',
+              accent3: '#1DD1A1',
+            },
+            backgroundImage: {
+              'main-gradient': 'linear-gradient(145deg, #0F2027, #203A43, #2C5364)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        --app-height: 100%;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      body {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+      }
+      #root {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .neon-glow {
+        text-shadow: 0 0 10px rgba(108, 92, 231, 0.8), 0 0 20px rgba(108, 92, 231, 0.4);
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgba(0,0,0,0.1);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #6C5CE7;
+        border-radius: 10px;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+      }
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+      /* Fix for mobile Safari height issue */
+      .h-screen-safe {
+        height: 100vh;
+        height: -webkit-fill-available;
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+</head>
+<body class="font-kids bg-main-gradient text-white">
+    <div id="root"></div>
+</body>
+</html>
